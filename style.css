@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(45deg, #000000, #1155a3);
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+#display {
+    font-style: normal;
+    height: 4.5rem;
+    max-height: 1000px;
+    width: 30rem;
+    max-width: 50rem;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 3rem;
+    text-align: right;
+    padding: 1rem;
+    background: linear-gradient(180deg, #ffffff, #b9cdb6);
+    color: #000000;
+    border: none;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+
+#display:hover {
+    background: linear-gradient(180deg, #b9cdb6, #ffffff);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    font-size: 4rem;
+    color: #c2b6b6;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button {
+    padding: 10px;
+    font-size: 3rem;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(180deg, #ffffff, #b9cdb6);
+    border-radius: 50px;
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(180deg, #b9cdb6, #ffffff);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#clear {
+    color: #fa0101;
+    background: linear-gradient(45deg, #1155a3, #cb6969);
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+#clear:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #cb6969, #1155a3);
+    box-shadow: 0 0 10px rgba(250, 1, 1, 0.3);
+}
+
+#operartions {
+    color: rgb(0, 39, 0);
+    background: linear-gradient(45deg, #1155a3, #69cb73);
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+#operartions:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #69cb73, #1155a3);
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+}
+
+.backspace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #a3a3a3, #1b99dd) !important;
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+.backspace img {
+    width: 4rem;
+}
+
+.backspace:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #1b99dd, #a3a3a3) !important;
+    box-shadow: 0 0 10px rgba(27, 153, 221, 0.3);
+}
+
+.equal {
+    color: #03321d;
+    background: linear-gradient(45deg, #ffffff, #13c675) !important;
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+.equal:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #13c675, #ffffff) !important;
+    box-shadow: 0 0 10px rgba(19, 198, 117, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #display {
+        width: 20rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        font-size: 2rem;
+    }
+
+    .button {
+        padding: 5px;
+        font-size: 1.5rem;
+        border-radius: 25px;
+    }
+
+    .backspace img {
+        width: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        /* padding: 15px 10px; */
+        width: 100%;
+    }
+    #display {
+        width: 20rem;
+        height: 6rem;
+        font-size: 3rem;
+        padding: 0.5rem;
+    }
+
+    .buttons {
+        gap: 0.5rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+
+    .button {
+        padding: 15px;
+        font-size: 4rem;
+        border-radius: 20px;
+        margin: 2px;
+    }
+
+    .backspace img {
+        width: 4rem;
+    }
+}

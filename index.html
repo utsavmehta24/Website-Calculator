@@ -1,0 +1,48 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Rocking Calculator">
+        <link rel="icon" type="image/gif" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QnbPyowBbQdUwGnBgh1lYhsR3awxLgsAGg&s">
+        <link rel="stylesheet" href="style.css">
+        <title>Rocking Calculator</title>
+    </head>
+
+    <body>
+        <div class="root">
+
+            <div class="main">
+                <input type="text" readonly id="display" placeholder="0">
+                <div class="buttons">
+                    <button onclick="clearScreen()" class="button" id="clear">C</button>
+                    <button onclick="deleteChar()" class="button backspace" id="operartions"><img 
+                            src="backspace.png" alt="backspace"></button>
+                    <button onclick="appendToDisplayBrackets()" class="button" id="operartions">()</button>
+                    <button onclick="appendToDisplay('%')" class="button" id="operartions">%</button>
+                    <button onclick="appendToDisplay('/')" class="button" id="operartions">÷</button>
+                    <button onclick="appendToDisplay('7')" class="button">7</button>
+                    <button onclick="appendToDisplay('8')" class="button">8</button>
+                    <button onclick="appendToDisplay('9')" class="button">9</button>
+                    <button onclick="appendToDisplay('*')" class="button" id="operartions">×</button>
+                    <button onclick="appendToDisplay('4')" class="button">4</button>
+                    <button onclick="appendToDisplay('5')" class="button">5</button>
+                    <button onclick="appendToDisplay('6')" class="button">6</button>
+                    <button onclick="appendToDisplay('-')" class="button" id="operartions">-</button>
+                    <button onclick="appendToDisplay('1')" class="button">1</button>
+                    <button onclick="appendToDisplay('2')" class="button">2</button>
+                    <button onclick="appendToDisplay('3')" class="button">3</button>
+                    <button onclick="appendToDisplay('+')" class="button" id="operartions">+</button>
+                    <button onclick="appendToDisplay('0')" class="button">0</button>
+                    <button onclick="appendToDisplay('.')" class="button">.</button>
+                    <button onclick="calculate()" class="equal button" id="equal">=</button>
+                </div>
+            </div>
+            <script src="script.js"></script>
+        </div>
+
+    </body>
+
+    </html>
